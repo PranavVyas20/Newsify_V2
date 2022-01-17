@@ -13,7 +13,7 @@ class RetrofitInstance {
     companion object{
         // Creating a singleton instance of Retrofit
         private val retrofit by lazy {
-            val logging = HttpLoggingInterceptor()
+            val logging = HttpLoggingInterceptor() // for debugging the response
             logging.setLevel(HttpLoggingInterceptor.Level.BODY)
             val retrofitClient = OkHttpClient.Builder()
                 .addInterceptor(logging)
