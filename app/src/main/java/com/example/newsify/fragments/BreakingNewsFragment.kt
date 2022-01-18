@@ -39,13 +39,15 @@ class BreakingNewsFragment : Fragment() {
         val inflatedView = inflater.inflate(R.layout.fragment_breaking_news, container, false)
         breakingNewsRv= inflatedView.findViewById(R.id.rvBreakingNews)
         m_LayoutManger = LinearLayoutManager(context)
-        var newsList: List<Article> = emptyList()
+        var newsList:List<Article> = emptyList()
 
         // Setup the recycler view
         setUpRecyclerView()
 
         //Initialise the view model:
         m_newsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        m_newsViewModel.getBreakingNews("in")
+
 
 //         Pagination stuff!
         breakingNewsRv.addOnScrollListener(object:RecyclerView.OnScrollListener(){
@@ -53,7 +55,6 @@ class BreakingNewsFragment : Fragment() {
                 val visibleItemCount = m_LayoutManger.childCount
                 val pastVisibleItem = m_LayoutManger.findFirstVisibleItemPosition()
                 val total  = m_newsAdapter.itemCount
-                val lIsLoading = m_newsViewModel.isLoading
 
                 if (!m_newsViewModel.isLoading && m_newsViewModel.currentBreakingNewsPageNo < m_newsViewModel.maxBreakingNewsPageNo){
                     if (visibleItemCount + pastVisibleItem>= total){

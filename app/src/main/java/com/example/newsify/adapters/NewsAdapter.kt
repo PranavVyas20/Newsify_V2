@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.newsify.Article
 import com.example.newsify.R
 
@@ -29,6 +30,7 @@ class NewsAdapter:RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
             findViewById<TextView>(R.id.tvSource).text = currentArticle.source.name
             findViewById<TextView>(R.id.tvTitle).text = currentArticle.title
             findViewById<TextView>(R.id.tvDescription).text = currentArticle.description
+            Glide.with(context).load(currentArticle.urlToImage).into(findViewById(R.id.ivArticleImage))
             setOnClickListener {
                 Toast.makeText(it.context,currentArticle.source.name,Toast.LENGTH_SHORT).show()
             }
