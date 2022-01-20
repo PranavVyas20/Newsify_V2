@@ -1,10 +1,13 @@
 package com.example.newsify.viewModel
 
 import android.app.Application
+import android.widget.ProgressBar
 import androidx.lifecycle.*
 import com.example.newsify.Article
 import com.example.newsify.NewsResponse
 import com.example.newsify.Repository.NewsRepository
+import com.example.newsify.roomDB.ArticleDatabase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import retrofit2.Response
@@ -15,14 +18,28 @@ class NewsViewModel(application: Application): AndroidViewModel(application) {
     var currentBreakingNewsPageNo = 1
     var maxBreakingNewsPageNo = 2
 
+
     var currentSearchedNewsPage = 1
     var maxSearchedNewsPage = 10
 
-    private val newsRepo:NewsRepository = NewsRepository()
+    private val newsRepo:NewsRepository
     val breakingNews:MutableLiveData<NewsResponse> = MutableLiveData()
     val searchedNews:MutableLiveData<NewsResponse> = MutableLiveData()
+    val readAllData:LiveData<List<Article>>
+
+    init {
+        val articleDao = ArticleDatabase.getDatabase(application).getDao()
+        newsRepo = NewsRepository(articleDao)
+        readAllData = newsRepo.getAllArticles
+    }
 
     var isLoading = false
+
+    fun saveArticle(article: Article) {
+        viewModelScope.launch {
+            newsRepo.saveArticle(article)
+        }
+    }
 
     fun searchNews(query:String,pageNo:Int){
         viewModelScope.launch {

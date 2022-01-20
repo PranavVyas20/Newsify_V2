@@ -8,9 +8,9 @@ import com.example.newsify.Article
 interface ArticleDao {
     // onConflict - if the article that we are inserting the db already exists it just replaces it !
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(article: Article):Long // returns an id of the article that was inserted
+    suspend fun insertArticle(article: Article):Long // returns an id of the article that was inserted
 
-    @Query("SELECT * FROM articles")
+    @Query("SELECT * FROM article_table")
     fun getAllArticles():LiveData<List<Article>>
 
     @Delete

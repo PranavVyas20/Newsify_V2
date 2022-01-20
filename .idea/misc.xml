@@ -6,13 +6,28 @@
         <entry key="app/src/main/res/drawable-v24/ic_all_news.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/drawable-v24/ic_breaking_news.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/drawable-v24/ic_favorite.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/drawable_open_article_btn.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/drawable_save_article_btn.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/drawable_share_btn.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/heart_save_news.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/ic_baseline_business_24.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/ic_baseline_star_outline_24.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/open_article_btn_bg.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/round_img_outline.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/save_news_btn_bg.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/share_news_btn_bg.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/layout-v31/new_item_article_preview.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/activity_news.xml" value="0.2028985507246377" />
+        <entry key="app/src/main/res/layout/activity_news.xml" value="0.4" />
         <entry key="app/src/main/res/layout/fragment_article.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/fragment_breaking_news.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_breaking_news.xml" value="0.264" />
         <entry key="app/src/main/res/layout/fragment_saved_news.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/fragment_search_news.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/item_article_preview.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/item_article_preview.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/new_item_article_preview.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/new_item_article_preview_saved_article.xml" value="0.128" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.29583333333333334" />
       </map>
     </option>
