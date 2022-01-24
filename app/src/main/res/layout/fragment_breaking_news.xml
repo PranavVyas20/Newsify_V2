@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:id="@+id/llyt"
     android:layout_height="match_parent">
 
         <TextView
@@ -19,6 +20,7 @@
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             app:tabMode="scrollable"
+            android:id="@+id/categoryTabLayout"
             app:tabSelectedTextColor="@color/purple_700"
             app:tabTextColor="@color/black"
             app:tabTextAppearance="@style/tabTextFont"
@@ -28,33 +30,37 @@
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
+                    android:id="@+id/latestNewsTab"
                     android:layout_height="wrap_content"
                     android:text="Latest" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
+                    android:id="@+id/business"
                     android:layout_height="wrap_content"
                     android:text="Business" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
+                    android:id="@+id/science"
+
                     android:layout_height="wrap_content"
                     android:text="Science" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabItem"
+                    android:id="@+id/technology"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tech" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabItem2"
+                    android:id="@+id/entertainment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Entertainment" />
 
                 <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tabItem3"
+                    android:id="@+id/sports"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sports" />

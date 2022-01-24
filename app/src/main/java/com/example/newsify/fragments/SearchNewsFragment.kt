@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsify.Article
@@ -94,7 +95,8 @@ lateinit var m_rv:RecyclerView
         }
         // Handling the open artile btn
         m_newsAdapter.setOnItemClickListener_openArticle {
-            Toast.makeText(activity,"Open article in web view", Toast.LENGTH_SHORT).show()
+            val action = SearchNewsFragmentDirections.actionSearchNewsFragmentToArticleFragment(it)
+            findNavController().navigate(action)
         }
         // handling the click on news articles for sharing article
         m_newsAdapter.setOnItemClikListener_shareArticle {

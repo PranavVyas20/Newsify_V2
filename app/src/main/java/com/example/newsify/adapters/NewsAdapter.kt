@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintSet
@@ -45,7 +46,15 @@ class NewsAdapter(private val fragmentType:String):RecyclerView.Adapter<NewsAdap
             val m_date = currentArticle.publishedAt?.let { convertDate(it) }
             findViewById<TextView>(R.id.publishedAtTv).text = m_date
             // Load image with glide
-            Glide.with(context).load(currentArticle.urlToImage).into(findViewById(R.id.ivArticleImage))
+            if(currentArticle.urlToImage!=null){
+                Glide.with(context).load(currentArticle.urlToImage).into(findViewById(R.id.ivArticleImage))
+            }else{
+                findViewById<ImageView>(R.id.ivArticleImage).apply {
+                    setImageResource(R.drawable.image_not_found)
+                    adjustViewBounds = false
+                }
+
+            }
 
             // Save article to db
             if (fragmentType !="snf"){

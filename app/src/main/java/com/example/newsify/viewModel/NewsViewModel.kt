@@ -17,10 +17,11 @@ import java.lang.ArithmeticException
 class NewsViewModel(application: Application): AndroidViewModel(application) {
     var currentBreakingNewsPageNo = 1
     var maxBreakingNewsPageNo = 2
+    var catChanged:Boolean = false
 
 
     var currentSearchedNewsPage = 1
-    var maxSearchedNewsPage = 10
+    var maxSearchedNewsPage = 4
 
     private val newsRepo:NewsRepository
     val breakingNews:MutableLiveData<NewsResponse> = MutableLiveData()
@@ -62,11 +63,11 @@ class NewsViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
-    fun getBreakingNews(countryCode:String){
+    fun getBreakingNews(countryCode:String,category:String){
         viewModelScope.launch {
             isLoading = true
             val newsResponse = try {
-                newsRepo.getBreakingNews("in",currentBreakingNewsPageNo)
+                newsRepo.getBreakingNews("in",category,currentBreakingNewsPageNo)
             }
             catch (e: IOException) {
                 return@launch

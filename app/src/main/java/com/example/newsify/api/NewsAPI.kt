@@ -14,6 +14,8 @@ interface NewsAPI {
         // therefore they need to be annotated with @Query
         @Query("country")
         countryCode:String = "in",
+        @Query("category")
+        category:String = "",
         @Query("page")
         pageNumber:Int = 1,
         @Query("apiKey")
@@ -31,4 +33,5 @@ interface NewsAPI {
         @Query("apiKey")
         apiKey:String = API_KEY
     ):Response<NewsResponse>
+
 }
