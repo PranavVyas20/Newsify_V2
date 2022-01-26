@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,10 +21,12 @@ import com.example.newsify.Article
 import com.example.newsify.R
 import com.example.newsify.adapters.NewsAdapter
 import com.example.newsify.viewModel.NewsViewModel
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.w3c.dom.Text
 
 class SearchNewsFragment : Fragment() {
 lateinit var m_viewModel: NewsViewModel
@@ -42,6 +46,7 @@ lateinit var m_rv:RecyclerView
 
         // Initialise the searchView
         val m_searchView = inflatedView.findViewById<EditText>(R.id.etSearch)
+        val helpTextView:TextView = inflatedView.findViewById(R.id.helpText)
         m_layoutManger = LinearLayoutManager(activity)
         // RecyclerView
         m_rv = inflatedView.findViewById(R.id.rvSearchNews)
@@ -53,6 +58,9 @@ lateinit var m_rv:RecyclerView
         // Handling the news search
         var m_job:Job? = null
         m_searchView.addTextChangedListener {
+            if(helpTextView.isVisible){
+                helpTextView.visibility = View.GONE
+            }
             searchNewsList = emptyList()
             m_job?.cancel()
             m_job = MainScope().launch {
@@ -60,16 +68,17 @@ lateinit var m_rv:RecyclerView
                 delay(1500L)
                 if(m_searchView.text.isNotEmpty()){
                     m_viewModel.searchNews(m_searchView.text.toString(),1)
+//                    pgBarSearch.visibility = View.GONE
                 }
-                pgBarSearch.visibility = View.GONE
             }
         }
 
         //Observe the Live data object and set data to the adapter
         m_viewModel.searchedNews.observe(viewLifecycleOwner, Observer {
-            pgBarSearch.visibility = View.GONE
                 searchNewsList+=it.articles
             m_newsAdapter.setData(searchNewsList)
+            pgBarSearch.visibility = View.GONE
+
         })
 
         //Pagination stuff!
@@ -91,6 +100,7 @@ lateinit var m_rv:RecyclerView
         })
         // Handling article save btn click on news articles
         m_newsAdapter.setOnItemClikListener_saveArticle {
+            Snackbar.make(inflatedView.findViewById(R.id.searchNewsFragment),"Article saved",Snackbar.LENGTH_SHORT).show()
             m_viewModel.saveArticle(it)
         }
         // Handling the open artile btn
@@ -118,5 +128,4 @@ lateinit var m_rv:RecyclerView
         m_rv.adapter = m_newsAdapter
         m_rv.layoutManager = m_layoutManger
     }
-
 }

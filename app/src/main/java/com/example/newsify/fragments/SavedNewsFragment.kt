@@ -17,6 +17,7 @@ import com.example.newsify.Article
 import com.example.newsify.R
 import com.example.newsify.adapters.NewsAdapter
 import com.example.newsify.viewModel.NewsViewModel
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 
 class SavedNewsFragment : Fragment() {
@@ -53,12 +54,17 @@ class SavedNewsFragment : Fragment() {
                 val shareIntent = Intent()
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.type="text/plain"
-                shareIntent.putExtra(Intent.EXTRA_TEXT, it.title+"\n here's the link: ${it.url}")
+                shareIntent.putExtra(Intent.EXTRA_TEXT, it.url)
                 startActivity(Intent.createChooser(shareIntent,"share with:"))
             }
             catch (e:Exception){
                 Toast.makeText(activity,"Error while sharing", Toast.LENGTH_SHORT).show()
             }
+        }
+        // Handling the delte article from db btn
+        m_newsAdapter.setOnItemClickListener_deleteArticle {
+            m_newsViewModel.deleteArticle(it)
+            Snackbar.make(inflatedView.findViewById(R.id.savedNewsFragment),"Article deleted",Snackbar.LENGTH_SHORT).show()
         }
 
     return inflatedView

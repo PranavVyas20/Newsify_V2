@@ -17,6 +17,9 @@ class NewsRepository(private val articleDao:ArticleDao) {
     suspend fun saveArticle(article:Article){
         articleDao.insertArticle(article)
     }
+    suspend fun deleteArticle(article:Article){
+        articleDao.deleteArticle(article)
+    }
 
 
 

@@ -46,11 +46,12 @@ class BreakingNewsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val inflatedView = inflater.inflate(R.layout.fragment_breaking_news, container, false)
+        val tabLayout:TabLayout = inflatedView.findViewById(R.id.categoryTabLayout)
+        var newsList:List<Article> = emptyList()
+
         breakingNewsRv= inflatedView.findViewById(R.id.rvBreakingNews)
         m_LayoutManger = LinearLayoutManager(context)
-        val tabLayout:TabLayout = inflatedView.findViewById(R.id.categoryTabLayout)
-         pgBar = inflatedView.findViewById(R.id.progressBar)
-        var newsList:List<Article> = emptyList()
+        pgBar = inflatedView.findViewById(R.id.progressBar)
 
         // Setup the recycler view
         setUpRecyclerView()
@@ -70,7 +71,6 @@ class BreakingNewsFragment : Fragment() {
 
         // Observing the news list
         m_newsViewModel.breakingNews.observe(viewLifecycleOwner, Observer {
-
             pgBar.visibility = View.GONE
             if(m_newsViewModel.catChanged){
                 newsList = it.articles.toList()
@@ -84,6 +84,7 @@ class BreakingNewsFragment : Fragment() {
         // handling the category change here
         tabLayout.addOnTabSelectedListener(object:TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
+                pgBar.visibility = View.VISIBLE
                 m_newsViewModel.currentBreakingNewsPageNo = 1
                 m_newsViewModel.catChanged = true
                 Toast.makeText(context, tab!!.id.toString(),Toast.LENGTH_SHORT).show()
@@ -95,13 +96,8 @@ class BreakingNewsFragment : Fragment() {
                     m_newsViewModel.getBreakingNews("in", currentCategory!!)
                 }
             }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
 
         // Handling article save btn click on news articles

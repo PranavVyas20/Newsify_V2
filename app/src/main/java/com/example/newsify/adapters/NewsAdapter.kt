@@ -53,9 +53,7 @@ class NewsAdapter(private val fragmentType:String):RecyclerView.Adapter<NewsAdap
                     setImageResource(R.drawable.image_not_found)
                     adjustViewBounds = false
                 }
-
             }
-
             // Save article to db
             if (fragmentType !="snf"){
                 findViewById<Button>(R.id.saveArticleBtn).setOnClickListener {
@@ -85,6 +83,17 @@ class NewsAdapter(private val fragmentType:String):RecyclerView.Adapter<NewsAdap
                     }
                 }
             }
+            // Delete article from db
+            if(fragmentType == "snf"){
+                findViewById<Button>(R.id.deleteArticleBtn2).setOnClickListener {
+                    onItemClickListener_delteArticle.let {
+                        if(it != null){
+                            it(currentArticle)
+                        }
+                    }
+                }
+            }
+
         }
     }
 
@@ -114,6 +123,12 @@ class NewsAdapter(private val fragmentType:String):RecyclerView.Adapter<NewsAdap
     private var onItemClickListener_shareArticle:((Article)->Unit)? = null
     fun setOnItemClikListener_shareArticle(m_listener:(Article)->Unit){
         onItemClickListener_shareArticle = m_listener
+    }
+
+    // Related to delete article from db btn clicked
+    private var onItemClickListener_delteArticle:((Article)->Unit?)? = null
+    fun setOnItemClickListener_deleteArticle(m_listener: (Article) -> Unit){
+        onItemClickListener_delteArticle = m_listener
     }
 
     // Converting the times\zones!!

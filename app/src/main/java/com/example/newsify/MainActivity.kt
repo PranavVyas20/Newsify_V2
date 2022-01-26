@@ -3,6 +3,7 @@ package com.example.newsify
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.newsify.api.RetrofitInstance
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 //    lateinit var viewModel: NewsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        installSplashScreen()
         setContentView(R.layout.activity_news)
 
 

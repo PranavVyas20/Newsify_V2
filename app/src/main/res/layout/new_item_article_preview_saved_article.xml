@@ -66,6 +66,12 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/share_news_btn_bg"
                 android:layout_height="30dp" />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete_saved_article_btn_drawable"
+                android:id="@+id/deleteArticleBtn2"
+                android:layout_marginEnd="20dp"/>
 
             <Button
                 android:layout_width="30dp"

@@ -41,6 +41,11 @@ class NewsViewModel(application: Application): AndroidViewModel(application) {
             newsRepo.saveArticle(article)
         }
     }
+    fun deleteArticle(article:Article){
+        viewModelScope.launch {
+            newsRepo.deleteArticle(article)
+        }
+    }
 
     fun searchNews(query:String,pageNo:Int){
         viewModelScope.launch {
