@@ -1,4 +1,4 @@
-Newsify is an simple news app made with mvvm clean architecture. It uses Google's News API for fetching news all over the globe.
+Newsify is an simple news app made with mvvm clean architecture in kotlin. It uses Google's News API for fetching news all over the globe.
 
 ## Features:
 
