@@ -1,7 +1,7 @@
 Newsify is an simple news app made with mvvm clean architecture in kotlin. It uses Google's News API for fetching news all over the globe.
 
 
-Made with the use of Modern Android development tools:
+## Made with the use of Modern Android development tools:
 
 
 - [Kotlin](https://developer.android.com/kotlin)
