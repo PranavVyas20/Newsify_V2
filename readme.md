@@ -14,5 +14,24 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
 
 ## Screenshots:
 
+<table>
+  <tr>
+  </tr>
+  <tr>
+    <td><img src="ss/Screenshot from 2022-04-09 09-44-30.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-44-55.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-12.png" width=270 height=480></td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+  </tr>
+  <tr>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-34.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-47.png" width=270 height=480></td>
+  </tr>
+ </table>
+
 
 Apk Lnk - https://drive.google.com/file/d/1cg55nZCcjljfts5IyyJg7XmVACK_yGqz/view?usp=sharing
