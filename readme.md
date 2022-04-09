@@ -1,5 +1,35 @@
 Newsify is an simple news app made with mvvm clean architecture in kotlin. It uses Google's News API for fetching news all over the globe.
 
+
+Made with the use of Modern Android development tools:
+- Kotlin 
+
+- Architecture Components
+
+
+- Navigation Components
+
+
+- Retrofit
+
+
+- Safe Args
+
+
+- MVVM
+
+
+- LiveData
+
+
+- Coroutines
+
+
+- Material Components 
+
+
+- Room DB
+
 ## Features:
 
 - User can filter news based upon multiple categories like sports,entertainment,tech,science,business.
@@ -38,5 +68,18 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
   </tr>
  </table>
 
+### Android Architecture Components
+* [Room](https://developer.android.com/training/data-storage/room)
+* [ViewModels](https://developer.android.com/topic/libraries/architecture/viewmodel)
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+* [Coroutines]
+
+### Libraries Used
+* [Retrofit](https://square.github.io/retrofit/)
+* [Glide](https://github.com/bumptech/glide)
+* [PrettyTime](https://github.com/ocpsoft/prettytime)
+
+### API Used
+* [News API](https://newsapi.org/)
 
 Apk Lnk - https://drive.google.com/file/d/1cg55nZCcjljfts5IyyJg7XmVACK_yGqz/view?usp=sharing
