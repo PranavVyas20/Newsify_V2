@@ -18,9 +18,9 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
   <tr>
   </tr>
   <tr>
-    <td><img src="screenshots/Screenshot from 2022-04-09 01-23-51.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot from 2022-04-09 01-24-04.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot from 2022-04-09 01-24-35.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-44-30.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-44-55.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-12.png" width=270 height=480></td>
   </tr>
  </table>
  
@@ -28,8 +28,8 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
   <tr>
   </tr>
   <tr>
-    <td><img src="screenshots/Screenshot from 2022-04-09 01-23-51.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot from 2022-04-09 01-24-04.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-34.png" width=270 height=480></td>
+    <td><img src="ss/Screenshot from 2022-04-09 09-46-47.png" width=270 height=480></td>
   </tr>
  </table>
 
