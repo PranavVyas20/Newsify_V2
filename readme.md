@@ -16,9 +16,9 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
 
 <table>
   <tr>
-     <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+     <td>Latest Headlines</td>
+     <td>Search News</td>
+     <td>News saved offline in local database</td>
   </tr>
   <tr>
     <td><img src="ss/Screenshot from 2022-04-09 09-44-30.png" width=270 height=480></td>
@@ -29,9 +29,8 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
  
  <table>
   <tr>
-     <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+     <td>Share News article</td>
+     <td>Read full article in web view</td>
   </tr>
   <tr>
     <td><img src="ss/Screenshot from 2022-04-09 10-42-23.png" width=270 height=480></td>
