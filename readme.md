@@ -2,33 +2,36 @@ Newsify is an simple news app made with mvvm clean architecture in kotlin. It us
 
 
 Made with the use of Modern Android development tools:
-- Kotlin 
-
-- Architecture Components
 
 
-- Navigation Components
+- [Kotlin](https://developer.android.com/kotlin)
+- 
+
+- [Navigation Components](https://developer.android.com/jetpack/androidx/releases/navigation)
 
 
-- Retrofit
+- [Retrofit](https://square.github.io/retrofit/)
 
 
-- Safe Args
+- [MVVM](https://developer.android.com/jetpack/guide)
+- 
+
+- [News API](https://newsapi.org/)
+- 
+
+- [LiveData](https://developer.android.com/reference/android/arch/lifecycle/LiveData)
 
 
-- MVVM
+- [Coroutines](https://developer.android.com/kotlin/coroutines)
 
 
-- LiveData
+- [Material Design](https://developer.android.com/reference/android/arch/lifecycle/LiveData) 
 
 
-- Coroutines
+- [Room DB](https://developer.android.com/jetpack/androidx/releases/room)
 
-
-- Material Components 
-
-
-- Room DB
+### API Used
+* [News API](https://newsapi.org/)
 
 ## Features:
 
@@ -68,18 +71,5 @@ Made with the use of Modern Android development tools:
   </tr>
  </table>
 
-### Android Architecture Components
-* [Room](https://developer.android.com/training/data-storage/room)
-* [ViewModels](https://developer.android.com/topic/libraries/architecture/viewmodel)
-* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
-* [Coroutines]
-
-### Libraries Used
-* [Retrofit](https://square.github.io/retrofit/)
-* [Glide](https://github.com/bumptech/glide)
-* [PrettyTime](https://github.com/ocpsoft/prettytime)
-
-### API Used
-* [News API](https://newsapi.org/)
 
 Apk Lnk - https://drive.google.com/file/d/1cg55nZCcjljfts5IyyJg7XmVACK_yGqz/view?usp=sharing
