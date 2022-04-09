@@ -5,7 +5,7 @@ Made with the use of Modern Android development tools:
 
 
 - [Kotlin](https://developer.android.com/kotlin)
-- 
+
 
 - [Navigation Components](https://developer.android.com/jetpack/androidx/releases/navigation)
 
@@ -14,10 +14,10 @@ Made with the use of Modern Android development tools:
 
 
 - [MVVM](https://developer.android.com/jetpack/guide)
-- 
+
 
 - [News API](https://newsapi.org/)
-- 
+
 
 - [LiveData](https://developer.android.com/reference/android/arch/lifecycle/LiveData)
 
